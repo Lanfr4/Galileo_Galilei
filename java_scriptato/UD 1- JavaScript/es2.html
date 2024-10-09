@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Esercitazione 2</title>
+    </head>
+    <body>
+       <form>
+              Righe: <input type="text" id="Val1"><br />
+              Colonne: <input type="text" id="Val2"><br />
+              <input type="button" value="Esegui" id="btn1"><br />
+              <br />
+          </form>
+        <!--
+        Realizzare un'interfaccia che permetta di inserire due valori, il primo valore sia chiamato
+        'righe' il secondo 'colonne'. Lo script JS recupera i valori inseriti e crea nella view
+        una tabella composta da tante righe e colonne quante sono quelle specificate ed in ogni
+        cella inserisce il prodotto riga*colonna.
+        -->
+        <script>
+              function tabella_con_multipli(){
+              // recuperare i riferimenti ai componenti del form
+              let v1 = parseInt(document.querySelector("#Val1").value);
+              let v2 = parseInt(document.querySelector("#Val2").value);
+  
+              let w = document.querySelector("#view");
+                  
+              let table = "<table>";
+                  for(let i=1;i<=v1;i++){
+                     // ci va la creazione di una riga della mia tabella
+                     for(let j=1;j<=v2;j++){
+                     // creazione della colonna piu inserimento del valore righa*colonna
+                     
+                     }
+                  }
+              }
+       </script>
+    </body>
+</html>
