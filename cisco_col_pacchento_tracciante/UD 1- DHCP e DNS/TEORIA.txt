@@ -31,3 +31,8 @@ CONFIGURARE LE INFORMAZIONI DI BASE DEL SERVER(indirizzo e maschera di rete );
 ANDIAMO NELLA SEZIONE SERVICES= e poi nella sottosezione dhcp;
 DHCP = poi dobbiamo inserire il gateway, poi l’ indirizzo da cui deve partire il server e il numero massimo di utenti;
 
+RIP ROUTING
+Serve per far sapere al mio router a quali reti è connesso direttamente, lo configuro inserendo gli indirizzi di rete delle reti adiacenti.
+!!Per vedere se la RIP ha configurato il router utilizziamo l’ inspect(lente di ingrandimento) poi selezioniamo il router di cui vogliamo vedere la configurazioni!!
+
+
