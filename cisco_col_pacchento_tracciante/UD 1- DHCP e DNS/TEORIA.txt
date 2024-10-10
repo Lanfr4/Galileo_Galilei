@@ -1,3 +1,166 @@
+QUARTO ANNO
+RIPASSO 
+YYYYYYYY. YYYYYYYY. YYYYYYYY. YYYYYYYY
+0/255			0/255		0/255		0255
+NET-ID=Numeri che identificano la rete
+HOST-ID= Numeri che identificano gli host
+NET-ID+HOST-ID;
+
+CLASSIFICAZIONE DEGLI INDIRIZZI DI RETE
+(tratteremo principalmente indirizzi di classe A, B e C)
+CLASSE A:
+(da 0.0.0.0 fino a 127.255.255.255)		
+1 BYTE NET-ID , 3 BYTE PER L’ HOST-ID ;
+NET-ID.HOST-ID-HOST-ID.HOST-ID;
+DIVISIONE IN BINARIO 0
+CLASSE B:
+(da 128.0.0.0 fino a 192.255.255.255)
+2 BYTE NET-ID , 2 BYTE PER L’ HOST-ID ;
+NET-ID.NET-ID.HOST-ID.HOST-ID;
+DIVISIONE IN BINARIO 10
+CLASSE C:
+(da 193.0.0.0 fino a248.255.255.255)
+3 BYTE NET-ID , 1 BYTE PER L’ HOST-ID ;
+NET-ID.NET-ID.NET-ID.HOST-ID;
+DIVISIONE IN BINARIO 110
+
+
+ESEMPIO DI INDIRIZZO DI RETE:
+
+190.0.0.0 		classe B
+200.0.10.0 	classe C
+200.10.5.0	classe C
+190.0.1.0		non è un indirizzo di rete 
+	SUBNETTING
+perché esiste il subnetting??
+il subnetting mi permette di prendere dei bit dall’ host-id, con un indirizzo di classe C  posso avere 4 sottoreti;
+Nasce perché non c’ erano più indirizzi disponibili, e con questi 4 byte hanno cercato di creare altri nuovi nodi nella rete, “rubando” dei byte agli host.
+Ed è per questo motivo, che dall’ IPV4( cioè 4 byte e 32 bit) si passa all’ IPV6( cioè con 6 byte con 128 bit ).
+
+SUBNETTING CON MASCHERA FISSA 
+
+NET-ID+SUBNET*+HOST
+
+*NOTA BENE: I BIT PER IL SUBNETTING VENGONO PRESI DAI BIT DEGLI HOST. DOPO AVER DETERMINATO I BIT DEL SUBNETTING, I BIT DELL NETID+ I BIT DEL SUBNETTING VANNO A DETERMINARE I BIT DELLA RETE.
+
+MASCHERA DI RETE
+La maschera di rete si compone mettendo  ad 1 tutti i bit della rete, esempio:
+170.0.80.0 classe B
+170.0.01010000.00000000
+255.255.11110000.00000000
+MASCHERA DI RETE: 255.255.240.0
+
+come fare tutto per la verifica?
+UN SOLO ROUTER COLLEGATO ALLE RETI LAN, CON LA MASCHERA FISSA
+RETE LOCALE 
+QUANTI CAVI ESCONO DAL ROUTER;
+CDIR
+NUMERO DI BIT AD ALTO NELLA RETE;
+SOTTORETI
+PER FARLE BASTA FARE LE COMBINAZIONI CON I BIT DEL SUBNET AD ALTO;
+MASCHERA FISSA
+CE L’ HANNO QUANDO TUTTE LE RETI HANNO LO STESSO CDIR;
+SERVER
+SI CONFIGURA COME UN PC NORMALE;
+RANGE PER UNA RETE CON SOTTORETE
+esempio:
+SOTTORETI:
+1 158.110.00000000.0/18
+158.110.0.1/18
+158.110.63.254
+158.110.63.255
+2 158.110.01000000.0/
+158.110.64.0/18
+158.110.127.254
+158.110.127.255
+3 158.110.10000000.0/
+4 158.110.11000000.0/
+IN BASE A CHE CRITERIO DEVO METTERE QUELLO DEL SUBNETTING?
+Li metto in base a quanti host devo aggiungere, li prendo dai bit degli host, prendendo quelli più significativi; 
+esempio:
+158.110.0.0
+158.110.00000000.0
+	      SUB-NET
+CDIR=\18(NUMERO DEI BIT AD ALTO);
+SUBNET MASK:
+Tutti i bit della rete ad alto cioè a 1; 
+esempio:
+158.110.00 000000.0
+255.255.192.0
+CONFIGURAZIONE DEL ROUTER PER OGNI PORTA
+Vado in config in base alla porta di appartenenza alla LAN, 
+cambia il default gateway(DG)
+
+MASCHERA VARIABILE
+pagina 28 del Libro di Sistemi
+La maschera variabile è una maschera che varia in base al numero di host che ho nelle sottoreti
+ESEMPIO:
+192.168.1.0
+LAN A →  50 host    6 bit/26
+LAN B →100 host    7 bit/25
+OGNI DISPOSITIVO DEVE AVERE IL PROPRIO INDIRIZZO IP, L'AMMINISTRATORE DEVE ASSEGNARE GLI INDIRIZZI DI SOTTORETI A PARTIRE DAL PREFISSO PIÙ PICCOLO, LA PRIMA RETE DA ESEGUIRE E’ QUELLA COL CDIR PIÙ BASSO
+CALCOLI
+LAN B
+192.168.1.0
+SM= 255.255.255.128;
+192.168.1.0 0000000 /25  → 192.168.1.0     /25
+RANGE
+192.168.1.1
+.
+192.168.1.127 
+192.168.1.1 0000000 /25  → 192.168.1.128 /25
+
+LAN A
+192.168.1.0 /26
+SM= 255.255.255.192;
+192.168.1. 00 000000 /26 → 192.168.1.0     /26
+RANGE
+192.168.1.1
+.
+192.168.1.63
+192.168.1. 01 000000 /26 → 192.168.1.64   /26
+RANGE
+192.168.1.64
+.
+192.168.1.127
+192.168.1. 10 000000 /26 → 192.168.1.128 /26
+192.168.1. 11 000000 /26 → 192.168.1.192 /26
+
+ESERCIZIO DI PROVA
+LAN S1 40 host ll LAN S2 50 host ll LAN S3 20 host
+INDIRIZZO DI RETE:
+200.69.96.0 /24 CLASSE C
+LAN 1 40 host  6 bit /26
+LAN 2 50 host  6 bit / 26
+LAN 3 20 host  5 bit / 27
+R1R2  / 30
+R2R3  / 30
+R1R3  / 30
+CALCOLI
+LAN 1
+200.69.96.0    /26
+.
+.
+200.69.96.63  /26
+LAN2
+200.69.96.64   /26
+.
+.
+200.69.96.127 /26
+LAN 3
+200.69.96.128 /27
+.
+.
+200.69.96.255  /27
+VADO A SFRUTTARE TUTTI GLI INDIRIZZI IN PIÙ, POICHÉ LA LAN3 HA SOLAMENTE 20 host LEGATA A SE.             
+
+INDIRIZZI DEI ROUTER
+200.68.96.1111 00 00 /30→ 200.69.96.240
+200.68.96.1111 01 00 /30→ 200.69.96.244
+200.68.96.1111 10 00 /30→ 200.69.96.248
+
+QUINTO AN
+
 DNS(Domain Name System)
 Il DNS serve ad assegnare un indirizzo ip a un dominio  a cui ci si vuole connettere.
 CONFIGURAZIONE:
