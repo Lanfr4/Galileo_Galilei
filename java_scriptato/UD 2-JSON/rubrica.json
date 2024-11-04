@@ -1,0 +1,19 @@
+[   {
+        "nome" : "Francesco",
+        "congome" : "Pradella",
+        "telefono" : "555-38798",
+        "mail" : "francesco.pradella@galileiostgilia.edu.it"
+    },
+    {
+        "nome" : "Seba",
+        "congome" : "Lanfra",
+        "telefono" : "555-12345",
+        "mail" : "sebalanfra@gmail.com"
+    },
+    {
+        "nome" : "Kristian",
+        "congome" : "Sasso",
+        "telefono" : "",
+        "mail" : "kristian.sasso@sonomorto.com"
+    }
+]
