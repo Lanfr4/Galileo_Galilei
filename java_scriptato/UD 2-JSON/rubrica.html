@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Visualizzazione di una rubrica JSON</title>
+    </head>
+    <body>
+        <div id="view" style="border: solid 1px rgb(200,0,0);"><b>Visualizzazione JSON:</b><br /></div>
+        <div id="view2" style="border: solid 1px rgb(0,220,0);"><b>Visualizzazione JSON:</b><br /></div>
+
+        <script>
+            /*
+                Ricercare funzione Javacript fetch, async, await
+
+                https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+                https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+                https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
+                
+            */
+           async function leggiSingoloJSon(){
+                const response = await fetch('rubrica.json');
+                const contatto = await response.json();
+
+                let v = document.querySelector("#view");
+                v.innerHTML += contatto.nome + "<br />";
+                v.innerHTML += contatto.cognome + "<br />";
+                v.innerHTML += contatto.telefono + "<br />";
+                v.innerHTML += contatto.mail + "<br />";
+           }
+
+           async function leggiVettoreJSon(){
+                const response = await fetch('rubrica2.json');
+                const contatto = await response.json();
+
+                let nrJson = contatto.length;
+                alert(nrJSon);
+                let v = document.querySelector("#view2");
+                for(let i=0; i<nrJson; i++){
+                    v.innerHTML += contatto[i].nome + "<br />";
+                    v.innerHTML += contatto[i].cognome + "<br />";
+                    v.innerHTML += contatto[i].telefono + "<br />";
+                    v.innerHTML += contatto[i].mail + "<br />";
+                    v.innerHTML += "<br />";
+                }
+           }
+           
+           async function leggiRubrica(){
+                leggiSingoloJSon(); // si basa sul file rubrica con un singolo JSON
+                leggiVettoreJSon(); // si basa sul file rubrica2 contente pu JSON
+           }
+
+           leggiRubrica();
+        </script>
+    </body>
+</html>
