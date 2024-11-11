@@ -26,15 +26,34 @@ writeMenu();
             case "formNuovoProdotto":{
                 //crea il form HTML/Bootstrap per l' inserimento dei dati di un prodotto
                 echo('
-                    form>
+                    form action ="prodotto.php">
                         <div class="mb-3">
                             <label for="exampleInputDescrizione" class="form-label">Descrizione Prodotto</label>
                             <input type="text" class="form-control" id="inputDescrizione" aria-describedby="Descrizione Help">
                             <div id="descrizioneHelp" class="form-text">Inserisci la descrizione del prodotto da inserire.</div>
                         </div>
+                        <inpput type="hidden" name"scelta" value ="aggiungiProdotto">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                     ');
+                break;
+            }
+
+            case "aggiungiProdotto":{
+                /* Case richiamnto dal form di inserimento nuovo prodotto, quindi
+                    nel vettore $_REQUEST[] avro la chiave 'descrizione' con contenuto il testo immesso
+                    nella casella del form
+                */
+                $desc = $_REQUEST['descrizione'];
+                $db = new mysqli($DBHOST, $DBUSER, $DBPASSWORD, $DBNAME);
+
+                $sql = "INSERTI INTO prodotto(descrizione) VALUES('$desc')";
+                if($db->($sql)){
+                    echo('<div class="alert alert-success"> Nuovo prodotto aggiunto.</div>');
+                }
+                else{
+                    echo('<div class="alert alert-warning"> Problema in aggiunta nuovo prodotto.</div>');
+                }
                 break;
             }
         }
