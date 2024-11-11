@@ -47,8 +47,8 @@ writeMenu();
                 $desc = $_REQUEST['descrizione'];
                 $db = new mysqli($DBHOST, $DBUSER, $DBPASSWORD, $DBNAME);
 
-                $sql = "INSERTI INTO prodotto(descrizione) VALUES('$desc')";
-                if($db->($sql)){
+                $sql = "INSERT INTO prodotto(descrizione) VALUES('$desc')";
+                if($db->query($sql)){
                     echo('<div class="alert alert-success"> Nuovo prodotto aggiunto.</div>');
                 }
                 else{
