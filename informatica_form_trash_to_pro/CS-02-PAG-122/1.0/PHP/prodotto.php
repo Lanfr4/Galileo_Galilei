@@ -16,11 +16,20 @@ writeMenu();
                 $sql = "SELECT * FROM prodotto";
                 $risultSet = $db->query($sql);
                 
-                while($record = $risultSet->fetch_assoc()){
+                echo('<table class="table">
+                    <thead>    
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Desrizione</th>
+                            </tr>
+                    </thead>
+                ');
+                /*while($record = $risultSet->fetch_assoc()){
+            
                     echo($record[id].' '.$record['descrizione'].'<br />');
                 }
                 $db->close();
-                break;
+                break;*/
             }
 
             case "formNuovoProdotto":{
