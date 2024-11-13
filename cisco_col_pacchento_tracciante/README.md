@@ -23,6 +23,7 @@ DEFAULT-ROUTER = bisogna inserire il default gateway;
 
 CONFIGURAZIONE DI UN SERVER CON DHCP 
 
+
 Bisogna configurare il server manualmente, perché non dispone di un sistema operativo incorporato
 
 CONFIGURARE LE INFORMAZIONI DI BASE DEL SERVER(indirizzo e maschera di rete );
