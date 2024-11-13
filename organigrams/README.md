@@ -23,7 +23,8 @@
     
     STAFF DI SUPPORTO
     
-    Allo staff di supporto appartiene quel personale che si occpua  di funzioni indirette per l'azienda e a volte scorrelate dalla missiorr, .o*.l,ammini strazione, gli uffici e il personale per le 
+    Allo staff di supporto appartiene quel personale che si occpua  di funzioni indirette per l'azienda e a volte s
+    correlate dalla missiorr, .o*.l,ammini strazione, gli uffici e il personale per le 
     relazioni con il pubblico e i clienti (Front office e cRM, customer Relationship Managemeir),
     l'unità di ricerca e sviluppo (R&D, Research and Deveropment),ma anche personale che si occupa dell'ufficio legale, del servizio mensa, ecc.
     
@@ -39,8 +40,10 @@
     
     
     L' azienda è un sistema comunque complesso, anche se è organizzata come
-    società semplice o addirittura come impresa individuale. Essa ha a che fare con una pluralità di elementi, come per esempio i componenti della strut-tura interna quali il dirigente e l'impiegato,
-    i clienti e i fornitori, ma anche altri soggetti che operano sul mercato come le banche e lo Stato. Questo insieme di soggetti sono i cosiddetti stakeholder (portatori di interesse).
+    società semplice o addirittura come impresa individuale. Essa ha a che fare con una pluralità di elementi,
+    come per esempio i componenti della strut-tura interna quali il dirigente e l'impiegato,
+    i clienti e i fornitori, ma anche altri soggetti che operano sul mercato come le banche e lo Stato.
+    Questo insieme di soggetti sono i cosiddetti stakeholder (portatori di interesse).
     Una semplice classificazione prevede due classi di stakeholder, quelli interni e quelli esterni all'azienda:
     
     * interni: proprietà e soci (business partners), dirigenti (manager),dipen-
