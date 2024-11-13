@@ -38,9 +38,10 @@
     In generale è abbastanza consolidato l'uso della locuzione gestione della catena
     di distribuzione (scM, suppty chain Managemenr,-o più semplicemente supply chain) 
     per indicare il coordinamento delle varie funzio niaziendali (logistiche, amministrative, produttive).
+
+
     
     STAKEHOLDER
-    
     
     L' azienda è un sistema comunque complesso, anche se è organizzata come
     società semplice o addirittura come impresa individuale. Essa ha a che fare con una pluralità di elementi,
