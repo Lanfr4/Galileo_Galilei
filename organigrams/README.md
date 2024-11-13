@@ -9,8 +9,9 @@
     
     LINE INTERMEDIA
     
-    Nella linea intermedia si posizionano i dirigenti che hanno il compito di coordinare il nucleo operativo e mantenere i iapporti con il vertice, 
-    contribuendo alla formulazione delle strategie aziendali. La linea intermedia di un'azienda è anche detta middle managemenf. Fanno parte di questo grup-
+    Nella linea intermedia si posizionano i dirigenti che hanno il compito di coordinare il nucleo operativo 
+    e mantenere i iapporti con il vertice,  contribuendo alla formulazione delle strategie aziendali.
+    La linea intermedia di un'azienda è anche detta middle managemenf. Fanno parte di questo grup-
     po anche i responsabili di progetto (project *orogrrj).
     
     TECNOSTRUTTURA
