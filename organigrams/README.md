@@ -34,7 +34,7 @@ In generale è abbastanza consolidato l'uso della locuzione gestione della caten
 STAKEHOLDER
 
 
-l' azienda è un sistema comunque complesso, anche se è organizzata come
+L' azienda è un sistema comunque complesso, anche se è organizzata come
 società semplice o addirittura come impresa individuale. Essa ha a che fare con una pluralità di elementi, come per esempio i componenti della strut-tura interna quali il dirigente e l'impiegato, i clienti e i fornitori, ma anche altri soggetti che operano sul mercato come le banche e lo Stato. Questo insieme di soggetti sono i cosiddetti rr*i:,^irurld,i:;: (portatori di interesse).
 Una semplice classificazione prevede due classi di stakeholder, quelli interni e quelli esterni all'azienda:
 
