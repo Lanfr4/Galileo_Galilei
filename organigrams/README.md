@@ -27,14 +27,16 @@
     Allo staff di supporto appartiene quel personale che si occpua  di funzioni indirette per l'azienda e a volte s
     correlate dalla missiorr, .o*.l,ammini strazione, gli uffici e il personale per le 
     relazioni con il pubblico e i clienti (Front office e cRM, customer Relationship Managemeir),
-    l'unità di ricerca e sviluppo (R&D, Research and Deveropment),ma anche personale che si occupa dell'ufficio legale, del servizio mensa, ecc.
+    l'unità di ricerca e sviluppo (R&D, Research and Deveropment),
+    ma anche personale che si occupa dell'ufficio legale, del servizio mensa, ecc.
     
     NUCLEO OPERATIVO
     
     Infine il nucleo operativo, tipicamente il gruppo più numeroso, comprende
     tutto il personale che svolge l'attività fondamental. d.ltu produzione dei beni
     e servizi dell'azienda) come gli operai, i tecnici, gli addetti alla produzione, ecc.
-    In generale è abbastanza consolidato l'uso della locuzione gestione della catena di distribuzione (scM, suppty chain Managemenr,-o più semplicemente supply chain) 
+    In generale è abbastanza consolidato l'uso della locuzione gestione della catena
+    di distribuzione (scM, suppty chain Managemenr,-o più semplicemente supply chain) 
     per indicare il coordinamento delle varie funzio niaziendali (logistiche, amministrative, produttive).
     
     STAKEHOLDER
