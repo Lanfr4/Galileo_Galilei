@@ -1,1 +1,73 @@
+DHCP
+CONFIGURAZIONE DI UN ROUTER IN DHCP COL CLI (COMMAND LINE INTERFACE)
+EN o ENABLE = ti permette di entrare nella zona privilegiata
+CONFIGURE TERMINAL= ti permette di andare a configurare/modificare i campi del Router;
+INTERFACE FASTETHERNET (nome della porta)= ti permette di entrare nella sezione della porta scritta prima;
+IP ADDRESS (gateway e maschera di rete) = ti fa inserire il gateway e la maschera che hai scritto prima;
+
+IP DHCP  POOL (lan di destinazione )= ti fa diventare il router un distributore di indirizzi verso la lan che abbiamo scritto prima;
+NETWORK = vado a scrivere l'indirizzo di rete e la maschera ;
+IP DHCP EXCLUDED-ADDRESS= ti permette di escludere un range di indirizzi che scrive l’ utente(estremi compresi);
+DEFAULT-ROUTER = bisogna inserire il default gateway;
+
+(Bisogna ricordarsi di selezionare l’ opzione DHCP nella configurazione del computer)
+
+CONFIGURAZIONE DI UN SERVER CON DHCP 
+Bisogna configurare il server manualmente, perché non dispone di un sistema operativo incorporato
+CONFIGURARE LE INFORMAZIONI DI BASE DEL SERVER(indirizzo e maschera di rete );
+ANDIAMO NELLA SEZIONE SERVICES= e poi nella sottosezione dhcp;
+DHCP = poi dobbiamo inserire il gateway, poi l’ indirizzo da cui deve partire il server e il numero massimo di utenti;
+
+DNS(Domain Name System)
+serve aIl DNSd assegnare un indirizzo ip a un dominio  a cui ci si vuole connettere.
+CONFIGURAZIONE:
+Mettiamo come indirizzo del server il .1 e mettiamo la maschera di rete;
+Poi mettiamo come default gateway il .100 ;
+(Quando andiamo a configurare altri server dobbiamo mettere l’ indirizzo del nostro server DNS dentro allo spazio DNS  Server)
+(RICORDATI di mettere la modalità DHCP nella sezione setting di ogni computer)
+RIPETERE questi procedimenti per gli ulteriori server presenti nel CISCO
+Poi bisogna aprire un router;
+Andiamo nella sezione  RIP(Routing Information  Protocol) dove dobbiamo inserire le reti collegate direttamente ad esso;
+Poi andiamo sulla static per configurare la ROUTING TABLE;
+(Facciamolo per tutti i router presenti)
+
+RIP ROUTING
+Serve per far sapere al mio router a quali reti è connesso direttamente, lo configuro inserendo gli indirizzi di rete delle reti adiacenti.
+!!Per vedere se la RIP ha configurato il router utilizziamo l’ inspect(lente di ingrandimento) poi selezioniamo il router di cui vogliamo vedere la configurazioni!!
+
+RIP ROUTING 2
+Per cambiare la versione rip da 1 a 2 si fa così:
+Bisogna andare nella CLI di un router e digitare i seguenti comandi:
+#router rip
+#version 2
+#no auto-summary
+Poi nella sezione RIP dove viene fuori RIPv2 dobbiamo inserire l’ indirizzo di rete per i collegamenti dei router e se fosse connesso a una lan dobbiamo inserire anche l’ indirizzo di rete di quella lan.
+
+!Se vado con l’ inspect su uno dei miei router riesce a individuare tutte le sottoreti che abbiamo creato!
+
+SERVER FTP(File Transfer Protocol)
+Per configurare il SERVER FTP  facciamo:
+Mettiamo come indirizzo .1
+Poi andiamo a sulla Fastethernet e mettiamo il suo indirizzo e maschera di rete;
+Poi nella sezione settings mettiamo il gateway della rete a cui appartiene;
+Poi andiamo nella scheda SERVICES e andiamo su FTP, lo accendiamo;
+Mettiamo un nome che deve essere univoco e una Password a nostra scelta;
+Fatto ciò premiamo su ADD e aggiungiamo le cose scritte in precedenza;
+Poi dobbiamo accedere a un computer andare sul COMMAND PROMPT
+Poi possiamo fare:
+FTP e subito dopo l’ indirizzo del server FTP;
+Inseriamo username e password;
+Poi possiamo fare un dir per vedere i file che ci sono già di default;
+Successivamente possiamo inviare un pacchetto col comando put, basta andare nell’ editor di testo presenti nei pc di cisco e creare un file
+Poi basta tornare sul COMMAND PROMPT e digitare put nome file; 
+Con PUT posso inviare un file già esistente nella mia lista che ho fatto con l DIR di prima;
+
+ SERVER E-MAIL
+Andiamo nella sezione configurazione e diamo al server l’ indirizzo del DNS Server e maschera della rete a cui appartiene;
+Apriamo la finestra DNS e creiamo un sito a caso , e gli diamo come indirizzo quello del server DNS, e clicchiamo su ADD;
+Poi dobbiamo creare un dominio,basta che inizi per pop, sempre nella sezione DNS inseriamo il suo nome e mettiamo come indirizzo quello del server;
+Dobbiamo inserire il nome dell destinazione delle mie e-mail, lo facciamo iniziare con  e bisogna cambiare il tipo a CNAME, nella sezione dell’ indirizzo mettiamo il nome del sito che abbiamo creato prima SOLO IL NOME, 
+Poi andiamo sulla sezione E-MAIL mettiamo il nome del mio dominio,premiamo SET che mi acquisisce il dominio  che è il sito che ho creato a casa, mettiamo un user e una password, lo posso fare un numero indefinito di volte.
+Per verificare il funzionamento basta andare su un pc, andiamo nella sezione DESKTOP e poi nella sezione E-MAIL bisogna mettere un nome e uno degli indirizzi creati prima, poi mettiamo l’ indirizzo creato con la POP su INCOMING e su OUTGOING mettiamo l’ indirizzo con SMTP; poi nelle ultime due sezioni bisogna mettere l'username e la password della mail di chi la spedisce
+Poi andiamo su RECEIVE per vedere l'email che è stata inviata;
 
