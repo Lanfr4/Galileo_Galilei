@@ -1,3 +1,4 @@
+ORGANIZZAZIONE AZIENDALE
 Nel vertice strategico si collocano quelle figure che hanno la responsabilità globale dell'organizzazione, come la proprietà, i soci e il consiglio
 di amministrazione (cdA),I'amministratore delegato (AD o cno, Chlef Executive officer) e il direttore generare. 
 Il vertice sirategico è spesso riconosciuto come il top management.Decide le strategie foidam.ntali di una azienda per raggiungere uno scopo specifico dettoLission.
@@ -12,12 +13,8 @@ le tramite consulenze di carattere tecnico professionale, come per esempio
 analisti e professionisti dell'ITc (Information and communication Techno_
 logy) o responsabili di settore denominati clo (chief Information oficer).
 
-Allo staffdi supporto appartiene quer personule À. ,i o..,rpu di funzio-
-ni indirette per l'azienda e a volte scorrelate dalla missiorr, .o*.l,ammini-
-strazione, gli uffici e il personale per re relazioni con il pubblico e i clienti (Front office e cRM, customer Relationship Managemeir),l,unità di ricer-
-ca e sviluppo (R&D, Research and Deveropment),ma anche personale che
+Allo staff di supporto appartiene quel personale che si occpua  di funzioni indirette per l'azienda e a volte scorrelate dalla missiorr, .o*.l,ammini strazione, gli uffici e il personale per re relazioni con il pubblico e i clienti (Front office e cRM, customer Relationship Managemeir),l'unità di ricerca e sviluppo (R&D, Research and Deveropment),ma anche personale che si occupa dell'ufficio legale, del servizio mensa, ecc.
 
-si occupa dell'ufficio legale, del servizio mensa, ecc.
 Infine ilnucleo operativo, tipicamente il gruppo più numeroso, comprende
 tutto il personale che svolge l'attività fondamental. d.ltu produzione dei beni
 e servizi dell'azienda) come gli operai, i tecnici, gli addetti alla produzione, ecc.
