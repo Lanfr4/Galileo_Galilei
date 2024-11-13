@@ -1,6 +1,7 @@
 ORGANIZZAZIONE AZIENDALE
 
 VERTICE STRATEGICO
+
 Nel vertice strategico si collocano quelle figure che hanno la responsabilità globale dell'organizzazione, come la proprietà, i soci e il consiglio
 di amministrazione (cdA),I'amministratore delegato (AD o cno, Chlef Executive officer) e il direttore generare. 
 Il vertice sirategico è spesso riconosciuto come il top management.Decide le strategie foidam.ntali di una azienda per raggiungere uno scopo specifico dettoLission.
