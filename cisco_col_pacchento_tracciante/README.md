@@ -1,8 +1,8 @@
-                DHCP
+                            DHCP
 
-      CONFIGURAZIONE DI UN ROUTER IN DHCP COL CLI (COMMAND LINE INTERFACE)
+    CONFIGURAZIONE DI UN ROUTER IN DHCP COL CLI (COMMAND LINE INTERFACE)
 
-      EN o ENABLE = ti permette di entrare nella zona privilegiata
+    EN o ENABLE = ti permette di entrare nella zona privilegiata
 
     CONFIGURE TERMINAL= ti permette di andare a configurare/modificare i campi del Router
     
