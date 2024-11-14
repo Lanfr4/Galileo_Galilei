@@ -11,23 +11,25 @@ writeMenu();
 
     // << your code start here >>
         switch($sc){
-            case "listaProdotto":{
+            case "listaMagazzino":{
                 //echo('Contenuto della tabella Prodotto:<br />');
                 // questo case deve aprire un flusso con mysql, quindi eseguire una query
                 // per visualizzare il contenuto della tabella PRODOTTO, con o senza tabella bootstrap.
                 $db = new mysqli($DBHOST, $DBUSER, $DBPASSWORD, $DBNAME);
-                $sql = "SELECT * FROM prodotto";
+                $sql = "SELECT * FROM magazzino";
                 $resultSet = $db->query($sql);
 
                 /*while($record = $resultSet->fetch_assoc()){
                     echo($record['id'].' '.$record['descrizione'].'<br />');    
                 }*/
                 echo('<table class="table table-striped table-hover ">
-                    <caption>Lista dei prodotti disponibili</caption>
+                    <caption>Lista dei magazzino disponibili</caption>
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Descrizione</th>
+                            <th scope="col">nome</th>
+                            <th scope="col"> citta</th>
+                            <th scope="col">provincia</th>
                             <th scope="col">Gestione</th>
                         </tr>
                     </thead>
@@ -36,8 +38,10 @@ writeMenu();
                     while($record = $resultSet->fetch_assoc()){
                         echo('<tr>
                                 <th scope="row">'.$record['id'].'</th>
-                                <td>'.$record['descrizione'].'</td>
-                                <td><a href="prodotto.php?scelta=deleteProdotto&idProdotto='.$record['id'].'">
+                                <td>'.$record['nome'].'</td>
+                                <td>'.$record['citta'].'</td> 
+                                <td>'.$record['provincia'].'</td>
+                                <td><a href="magazzino.php?scelta=deleteMagazzino&idMagazzino='.$record['id'].'">
                                         <button type="button" class="btn btn-primary">Cancella</button>
                                     </a>
                                 </td>
@@ -58,49 +62,55 @@ writeMenu();
                 $db->close();
                 break;
             }
-            case "formNuovoProdotto":{
+            case "formNuovoMagazzino":{
                 // crea il form HTML/Bootstrap per l'inserimento dei dati di un prodotto.
                 echo('
-                    <form action="prodotto.php">
+                    <form action="magazzino.php">
                         <div class="mb-3">
-                            <label for="inputDescrizione" class="form-label">Descrizione Prodotto:</label>
-                            <input type="text" name="descrizione" class="form-control" id="inputDescrizione" aria-describedby="descrizioneHelp">
-                            <div id="descrizioneHelp" class="form-text">Inserisci la descrizione del prodotto da inserire</div>
+                            <label for="inputDescrizione" class="form-label">nome Magazzino:</label>
+                            <input type="text" name="nome" class="form-control" id="inputnome" aria-describedby="nomeHelp">
+                            <label for="inputDescrizione" class="form-label">citta Magazzino:</label>
+                            <input type="text" name="citta" class="form-control" id="inputcitta" aria-describedby="cittaHelp">
+                            <label for="inputDescrizione" class="form-label">provincia citta Magazzino:</label>
+                            <input type="text" name="provincia" class="form-control" id="inputprovincia" aria-describedby="provinciaHelp">
                         </div>
-                        <input type="hidden" name="scelta" value="aggiungiProdotto">
+                        <input type="hidden" name="scelta" value="aggiungiMagazzino">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 ');
                 break;
             }
-            case "aggiungiProdotto":{
+            case "aggiungiMagazzino":{
                 /* Case richiamato dal form di inserimento nuovo prodotto, quindi
                     nel vettore $_REQUEST[] avrò la chiave 'descrizione' con contenuto il testo immesso
                     nella casella del form
                 */
-                $desc = $_REQUEST['descrizione'];
+                $desc = $_REQUEST['nome'];
+                $citta = $_REQUEST['citta'];
+                $provincia = $_REQUEST['provincia'];
                 $db = new mysqli($DBHOST, $DBUSER, $DBPASSWORD, $DBNAME);
 
-                $sql = "INSERT INTO prodotto(descrizione) VALUES('$desc')";
-                
+                $sql = "INSERT INTO magazzino(nome, citta, provincia) VALUES('$desc', '$citta', '$provincia')";
+
+
                 if($db->query($sql)){
-                    echo('<div class="alert alert-success">Nuovo prodotto aggiunto.</div>');
+                    echo('<div class="alert alert-success">Nuovo magazzino aggiunto.</div>');
                 }
                 else{
-                    echo('<div class="alert alert-warning">Problema in aggiunta nuovo prodotto.</div>');
+                    echo('<div class="alert alert-warning">Problema in aggiunta nuovo magazzino.</div>');
                 }
                 $db->close();
                 break;
             }
-            case "deleteProdotto":{
-                $idP = $_REQUEST['idProdotto'];
+            case "deleteMagazzino":{
+                $idP = $_REQUEST['idMagazzino'];
                 $db = new mysqli($DBHOST, $DBUSER, $DBPASSWORD, $DBNAME);
 
-                $sql = "DELETE FROM prodotto WHERE id='$idP'";
+                $sql = "DELETE FROM magazzino WHERE id='$idP'";
                 if($db->query($sql))
-                    echo('<div class="alert alert-success">Prodotto Cancellato Correttamente.</div>');
+                    echo('<div class="alert alert-success">Magazzino Cancellato Correttamente.</div>');
                 else
-                    echo('<div class="alert alert-warning">Prodotto inesistente o errore in cancellazione.</div>');
+                    echo('<div class="alert alert-warning">Magazzino inesistente o errore in cancellazione.</div>');
                 
                 $db->close();
                 break;
