@@ -22,7 +22,6 @@
     
     
   CONFIGURAZIONE DI UN SERVER CON DHCP 
-
 ---------------------------------------------------------------
     
 Bisogna configurare il server manualmente, perché non dispone di un sistema operativo incorporato
