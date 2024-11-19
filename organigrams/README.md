@@ -1,5 +1,5 @@
 ORGANIZZAZIONE AZIENDALE
-    
+----------------------------------------------
 VERTICE STRATEGICO
     
 Nel vertice strategico si collocano quelle figure che hanno la responsabilità globale dell'organizzazione, 
@@ -42,7 +42,7 @@ per indicare il coordinamento delle varie funzio niaziendali (logistiche, ammini
 
     
 STAKEHOLDER
-    
+----------------------------------------------  
 L' azienda è un sistema comunque complesso, anche se è organizzata come
 società semplice o addirittura come impresa individuale. Essa ha a che fare con una pluralità di elementi,
 come per esempio i componenti della strut-tura interna quali il dirigente e l'impiegato,
