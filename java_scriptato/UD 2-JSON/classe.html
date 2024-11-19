@@ -1,0 +1,42 @@
+<!DOCTYPE HMTL>
+    <hmtl>
+        <title>Registro della Nostra classe in JSON</title>
+    </hmtl>
+    <body>
+        <h3>Elenco della Classe</h3>
+        <div>
+            <button id='btn1'>Cliccami</buttons>
+            <span id='span'>...</span>
+        </div>
+        <div id="view" style="border: solid 1px rgb(200,0,0);"><b>Registro della Classe:</b><br /></div>
+        <script>
+            async function leggiClasse(){
+                //alert("toc toc");
+                const response = await fetch('classe.json');
+                const contatto = await response.json();
+
+                let nrJson = contatto.length;
+                alert(nrJson);
+                let v = document.querySelector("#view");
+                for(let i=0; i<nrJson; i++){
+                    v.innerHTML += contatto[i].nome + "<br />";
+                    v.innerHTML += contatto[i].cognome + "<br />";
+                    v.innerHTML += contatto[i].paeseDiResidenza + "<br />";
+                    v.innerHTML += contatto[i] .dataDiNascita + "<br />";
+                    v.innerHTML += "<br />";
+                }
+            }
+            /*async function studia(){
+                const button = document.querySelector('#button');
+                const contatto = await response.json();
+	            button.onclick = () => {
+                    leggiClasse();
+                }
+            }*/
+
+            let btn1 = document.querySelector("#btn1");
+            btn1.onclick = leggiClasse;
+            //studia();
+        </script>
+    </body>
+</hmtl>

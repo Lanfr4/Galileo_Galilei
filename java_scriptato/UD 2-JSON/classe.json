@@ -1,0 +1,86 @@
+[
+    {
+        "cognome" : "Lanfranchi",
+        "nome" : "Sebastiano",
+        "paeseDiResidenza" : "Castelnovo Bariano",
+        "dataDiNascita" : "2006/07/23"
+    },
+    {
+        "cognome" : "Boselli",
+        "nome" : "Riccardo",
+        "paeseDiResidenza" : "Coreggioli",
+        "dataDiNascita" : "2006/01/08"
+    },
+    {
+        "cognome" : "Cavallaro",
+        "nome" : "Luca",
+        "paeseDiResidenza" : "Revere",
+        "dataDiNascita" : "2006/11/08"
+    },
+    {
+        "cognome" : "Lombardi",
+        "nome" : "Alberto",
+        "paeseDiResidenza" : "Bonferraro",
+        "dataDiNascita" : "2006/11/06"
+    },
+    {
+        "cognome" : "Sasso",
+        "nome" : "Kristian",
+        "paeseDiResidenza" : "Roncanova",
+        "dataDiNascita" : "2006/07/04"
+    },
+    {
+        "cognome" : "Molinari",
+        "nome" : "Luca",
+        "paeseDiResidenza" : "Poggio Rusco",
+        "dataDiNascita" : "2006/11/13"
+    },
+    {
+        "cognome" : "Rossi",
+        "nome" : "Yuri",
+        "paeseDiResidenza" : "Castelnovo Bariano",
+        "dataDiNascita" : "2006/02/12"
+    },
+    {
+        "cognome" : "Sacchiero",
+        "nome" : "Matteo",
+        "paeseDiResidenza" : "Carbonara di Po",
+        "dataDiNascita" : "2006/02/9"
+    },
+    {
+        "cognome" : "Rossi",
+        "nome" : "Tommaso",
+        "paeseDiResidenza" : "Ostiglia",
+        "dataDiNascita" : "2006/12/13"
+    },
+    {
+        "cognome" : "Kumar",
+        "nome" : "Manav",
+        "paeseDiResidenza" : "Revere",
+        "dataDiNascita" : "2006/03/17"
+    },
+    {
+        "cognome" : "Miranda Perez",
+        "nome" : "Juan Carlos",
+        "paeseDiResidenza" : "Ostiglia",
+        "dataDiNascita" : "2005/02/20"
+    },
+    {
+        "cognome" : "Singh",
+        "nome" : "Inder",
+        "paeseDiResidenza" : "Villapoma",
+        "dataDiNascita" : "2005/10/06"
+    },
+    {
+        "cognome" : "Gentile",
+        "nome" : "Emanuele",
+        "paeseDiResidenza" : "Melara",
+        "dataDiNascita" : "2006/08/01"
+    },
+    {
+        "cognome" : "Ouseffar",
+        "nome" : "Badr",
+        "paeseDiResidenza" : "Revere",
+        "dataDiNascita" : "2004/02/07"
+    }
+]
