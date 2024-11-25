@@ -1,0 +1,73 @@
+[
+    {
+        "cognome" : "Lanfanchi",
+        "nome" : "Sebastiano" ,
+        "data" : "2023-07-23",
+        "targa" : "EM7206R",
+        "punti" : "10"
+    },
+    {
+        "cognome" : "Boselli",
+        "nome" : "Riccardo" ,
+        "data" : "2022-9-11",
+        "targa" : "RB119B",
+        "punti" : "12"
+    },
+    {
+        "cognome" : "Lombardi",
+        "nome" : "Alberto" ,
+        "data" : "2022-11-8",
+        "targa" : "LB104Y",
+        "punti" : "11"
+    },
+    {
+        "cognome" : "Scott",
+        "nome" : "Travis" ,
+        "data" : "2020-10-20",
+        "targa" : "TS098E",
+        "punti" : "23"
+    },
+    {
+        "cognome" : "Sasso",
+        "nome" : "Kristian" ,
+        "data" : "2013-07-04",
+        "targa" : "SE550K",
+        "punti" : "30"
+    },
+    {
+        "cognome" : "Rossi",
+        "nome" : "Giulia" ,
+        "data" : "2015-04-01",
+        "targa" : "RS123P",
+        "punti" : "6"
+    },
+    {
+        "cognome" : "Franchini",
+        "nome" : "Marco" ,
+        "data" : "2019-03-23",
+        "targa" : "TR104MS",
+        "punti" : "10"
+    },
+    {
+        "cognome" : "Merluzzo",
+        "nome" : "Maurizio" ,
+        "data" : "2021-11-23",
+        "targa" : "M54RE3",
+        "punti" : "20"
+    },
+    {
+        "cognome" : "Baldini",
+        "nome" : "Nanni" ,
+        "data" : "2020-02-02",
+        "targa" : "BN322T",
+        "punti" : "5"
+    },
+    {
+        "cognome" : "Stella Del Mattino",
+        "nome" : "Charlie" ,
+        "data" : "2001-12-15",
+        "targa" : "SC666M",
+        "punti" : "21"
+    }
+    
+]
