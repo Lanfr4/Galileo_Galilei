@@ -1,0 +1,52 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <title> Visualizzazione totale dei brawler in una tabella  </title>
+    <body>
+        <!-- Lista completa di Brawler  :)-->
+        <button id ="btn1"> Lista Completa dei Brawler </button>
+        <div id="view" style="border: solid 0px rgb(200,200,200);">
+            Risultati delle funzioni...
+        </div>
+        <br><br><br>
+
+        <script>
+            async function allBrawlers(){
+                alert ("toc toc");
+                const response = await fetch('brawler.json');
+                const contatto= await response.json();
+                let nrJson = contatto.length;
+                let v = document.querySelector("#view");
+                //alert(nrJson);
+                let table;
+
+                table = '<table class="table table-striped">';
+                table +='<thead>';
+                        table+='<tr>';
+                            table+='<th scope="col">#</th>';
+                            table+='<th scope="col">Nome</th>';
+                            table+='<th scope="col">Rarita</th>';
+                            table+='<th scope="col">Coppe</th>';
+                        table+='</tr>';
+                table+='</thead>';
+                table+='<tbody>';
+            for(let i =0;i<nrJson;i++){
+                    table+='<tr>';
+                            table+='<th scope="row">'+(i+1)+'</th>';
+                            table+='<td>'+contatto[i].nome+'</td>';
+                            table+='<td>'+contatto[i].rarita+'</td>';
+                            table+='<td>'+contatto[i].coppe+'</td>';
+                        table+='</tr>';;
+                }
+                table+='</tbody>'; 
+                table+='<caption>Lista brawler presenti </caption>';
+                table += '</table>';
+                v.innerHTML = table;
+            }
+            let btn1 = document.querySelector("#btn1");
+            btn1.onclick = allBrawlers;
+        </script>
+    </body>
+</html>
