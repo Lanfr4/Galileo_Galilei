@@ -1,0 +1,65 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <title> ESERCIZI PRE VERFICIA </title>
+    <body>
+        <h1> Ecco degli esericizi in JSON</h1>
+
+        <!-- Lista completa di Brawler  :)-->
+        <div id="view" style="border: solid 1px rgb(200,0,0);"><b>Visualizzazione  completa dei BRAWLER :</b><br /></div>
+        <button id ="btn1"> Lista Completa dei Brawler </button>
+        <br><br><br>
+        <!-- Lista dei Brawler in base alla rarita-->
+        <div class="mb-3">
+            <label for="rarita" class="form-label"> Dimmi la Rarita del Brawler:</label>
+            <input type="text" class="form-control" id="rarita" >
+        </div>
+        <div id="view2" style="border: solid 1px rgb(0,220,10);"><b>Visualizzazione per rarita dei  BRAWLER :</b><br /></div>
+        <button id ="btn2"> Brawler In base alla rarita </button>
+
+        <script>
+            async function allBrawlers(){
+                alert ("toc toc");
+                const response = await fetch('brawler.json');
+                const contatto= await response.json();
+                let nrJson = contatto.length;
+                let v = document.querySelector("#view");
+                //alert(nrJson);
+
+                for(let i =0;i<nrJson;i++){
+                    v.innerHTML += contatto[i].nome + "<br/>";
+                    v.innerHTML += contatto[i].rarita + "<br/>";
+                    v.innerHTML += contatto[i].coppe + "<br/>";
+                    v.innerHTML += "<br />";
+                }
+            }
+        async function rarityBrawlers(){
+            alert("toc toc");
+            const response = await fetch('brawler.json');
+            const contatto = await response.json();
+            let nrJson = contatto.length; 
+            let v = document.querySelector("#view2");
+            let rarita =  document.getElementById("rarita").value;
+
+
+            for(let i=0;i<nrJson;i++){
+                if(contatto[i].rarita.toUpperCase() == rarita.toUpperCase( )){
+                    v.innerHTML += contatto[i].nome + "<br/>";
+                    v.innerHTML += contatto[i].rarita + "<br/>";
+                    v.innerHTML += contatto[i].coppe + "<br/>";
+                    v.innerHTML += "<br />";
+                }
+            }
+        }
+
+        let btn1 = document.querySelector("#btn1");
+        btn1.onclick = allBrawlers;
+
+        let btn2 = document.querySelector("#btn2");
+        btn2.onclick = rarityBrawlers;
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+[
+      {
+        "nome": "Shelly",
+        "rarita": "Comune",
+        "coppe": 1550
+      },
+      {
+        "nome": "Bull",
+        "rarita": "Rara",
+        "coppe": 1800
+      },
+      {
+        "nome": "Ricochet",
+        "rarita": "Epica",
+        "coppe": 1200
+      },
+      {
+        "nome": "Piper",
+        "rarita": "Leggendaria",
+        "coppe": 1999
+      },
+      {
+        "nome": "Barley",
+        "rarita": "Epica",
+        "coppe": 1100
+      },
+      {
+        "nome": "Jessie",
+        "rarita": "Rara",
+        "coppe": 1350
+      },
+      {
+        "nome": "Edgar",
+        "rarita": "Leggendaria",
+        "coppe": 1600
+      },
+      {
+        "nome": "Nita",
+        "rarita": "Comune",
+        "coppe": 800
+      }
+]
