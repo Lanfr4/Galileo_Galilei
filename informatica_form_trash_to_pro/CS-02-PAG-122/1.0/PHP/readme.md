@@ -1,1 +1,0 @@
-Questo folder contiene tutto il pacchetto di pagine che operano sul nostro gestionale il core della nostra applicazione.
