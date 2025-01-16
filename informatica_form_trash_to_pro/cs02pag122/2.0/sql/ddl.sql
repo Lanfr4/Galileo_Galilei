@@ -26,3 +26,10 @@ CREATE TABLE ACQUISTO(
     foreign key(idProdotto) references PRODOTTO(id),
     foreign key(idMagazzino) references MAGAZZINO(id)
 )ENGINE=InnoDB;
+
+INSER INTO admins(cognome, nome, mail, password)
+VALUES('Francesco', 'Pradella', 'f@p.it', MD5('12345678'));
+INSER INTO admins(cognome, nome, mail, password)
+VALUES('Sebastiano', 'Lanfranchi', 's@l.it', MD5('01234567'));
+INSER INTO admins(cognome, nome, mail, password)
+VALUES('Alberto', 'Lombardi', 'a@l.it', MD5('abcd1234'));
