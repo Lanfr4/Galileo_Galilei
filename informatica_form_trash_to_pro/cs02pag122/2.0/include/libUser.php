@@ -16,7 +16,7 @@ function writeHeader(){
             <html>
                 <head>
                     <meta charset="utf-8">
-                    <title>CASO STUDIO 02 PAGINA 122 User Interface</title>
+                    <title>CASO STUDIO 02 PAGINA 122</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1">
                     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
                 </head>
@@ -57,7 +57,8 @@ function writeMenu(){
                                 PRODOTTO
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="prodotto.php?scelta=listaProdotto">List Prodotto</a></li>
+                                <li><a class="dropdown-item" href="prodottoUser.php?scelta=listaProdotto">List Prodotto</a></li>
+                                <li><a class="dropdown-item" href="PDFprodotto.php?scelta=listaMagazzino">PDF Prodotti</a></li>
                             </ul>
                         </li>
 
@@ -66,16 +67,8 @@ function writeMenu(){
                                 MAGAZZINO
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="magazzino.php?scelta=listaMagazzino">List Magazzino</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                ACQUISTO
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="acquisto.php?scelta=listaAcquisto">List Acquisto</a></li>
+                                <li><a class="dropdown-item" href="magazzinoUser.php?scelta=listaMagazzino">List Magazzino</a></li>
+                                <li><a class="dropdown-item" href="PDFmagazzino.php?scelta=listaMagazzino">PDF Magazzini</a></li>
                             </ul>
                         </li>
                     </ul>
