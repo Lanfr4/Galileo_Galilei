@@ -14,7 +14,7 @@ writeHeader();
 
     // << your code start here >>
         switch($sc){
-            case "listaProdotto":{
+            case "listaProdotto":{ 
     
                 $db = new mysqli($DBHOST, $DBUSER, $DBPASSWORD, $DBNAME);
                 $sql = "SELECT * FROM prodotto";
@@ -22,6 +22,11 @@ writeHeader();
 
                 echo('<table class="table table-striped table-hover ">
                     <caption>Lista dei prodotti disponibili</caption>
+                    <caption>
+                        <a href="PDFProdotto.php" target="new">
+                            <button type="button" class="btn btn-primary">PDF Prodotto</button>
+                        </a>
+                    </caption>
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -34,7 +39,6 @@ writeHeader();
                         echo('<tr>
                                 <th scope="row">'.$record['id'].'</th>
                                 <td>'.$record['descrizione'].'</td>
-                                <td><a href="prodottoUser.php?scelta=deleteProdotto&idProdotto='.$record['id'].'">
                                     </a>
                                 </td>
                             </tr>
@@ -52,7 +56,12 @@ writeHeader();
                 $resultSet = $db->query($sql);
 
                 echo('<table class="table table-striped table-hover ">
-                    <caption>Lista dei prodotti disponibili</caption>
+                    <caption>Lista dei magazzini disponibili</caption>
+                    <caption>
+                        <a href="PDFMagazzino.php" target="new">
+                            <button type="button" class="btn btn-primary">PDF Magazzino</button>
+                        </a>
+                    </caption>
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -69,7 +78,6 @@ writeHeader();
                                 <td>'.$record['nome'].'</td>
                                 <td>'.$record['citta'].'</td>
                                 <td>'.$record['provincia'].'</td>
-                                <td><a href="magazzinoUser.php?scelta=deleteMagazzino&idMagazzino='.$record['id'].'">
                                     </a>
                                 </td>
                             </tr>
