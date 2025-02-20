@@ -46,7 +46,11 @@ function writeFooter(){
  */
 function writeMenu(){
     echo('
-         
+
+
+
+        
+         </div>
     '); //*/
 
     return;
