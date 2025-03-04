@@ -1,6 +1,6 @@
 <?php
 // includo la libreria con funzioni necessarie all'interfaccia.
-require('../include/libAgenzia.php');
+require('../include/lib.php');
 // richiamo la funzione per la creazione della sezione iniziale delle pagine
 writeHeader();
 writeMenu();
