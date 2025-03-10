@@ -6,7 +6,7 @@ writeHeader();
 writeMenu();
 
     // << your code start here >>
-        echo('<div class="alert alert-success">Pare funzionare tutto!</div>');
+       // echo('<div class="alert alert-success">Pare funzionare tutto!</div>');
 
     // << end fo your code >>
 
