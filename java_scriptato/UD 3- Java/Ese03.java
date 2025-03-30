@@ -1,46 +1,55 @@
-/*
-    Ese03:
-    Realizzare un programma Java che richieda un numero in input finche non viene inserito un numero primo, 
-    quando il numero primo viene inserito comunica a video quanti tentativi sono stati eseguiti.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ * Programma per l'inserimento ripetuto di numeri non primi.
  */
-import java.util.*;
-import java.io.*;
-
-public class Ese03 {
-    public static void main(String args[]){
-
-        int volte = 0;
-        int cnt = 0;
-        int sdn = 0;
-
-        while(cnt == 0){
-
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            String str1;
-            System.out.println("Inserisci un numero: ");
-            str1 = br.readLine();
-
-            int num = Integer.parseInt(str1);
-
-            for(int i =1;i<num ;i++){
-                if(num%i == 0){
-                    sdn = sdn+ i ;
-                }
-            }
-
-            num = 0;
-            str1 = "NULL";
-
-            if(sdn <= 2){
-                volte +=1;
-                cnt =1;
-            }
-            else{
-                volte+=1;
-            }
+public class Ese03{
+    /**
+     * Determina se un numero è primo oppure no
+     * @param _num Numero da verificare
+     * @return Booleano 1 è primo, 0 non è primo.
+     */
+    public static int isPrimo(int _num){
+        int trovato = 1;
+        int i;
+        for(i=2; i<=_num/2; i++){
+            if(_num%i == 0)
+                trovato = 0;
         }
-
-        System.out.print("Hai inserito un numero primo,ci ha messo : ");
-        System.out.print(+volte+" ");
+        return(trovato);
     }
+    
+    /**
+     * Main Program
+     * @param args Parametri da console
+     * @throws IOException Esclude le eccezioni in input.
+     */
+    public static void main(String args[]) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String strIn;
+        int num;
+        int i, cnt;
+        int trovato;
+
+        cnt = 0;
+        do{
+            cnt++;
+            System.out.print("Inserisci un numero: ");
+            strIn = br.readLine();
+            num = Integer.parseInt(strIn);
+            /* 
+            trovato = 1;
+            for(i=2; i<=num/2; i++){
+                if(num%i == 0)
+                    trovato = 0;
+            }*/
+            trovato = isPrimo(num);
+            if(trovato == 0)
+                System.out.println("Non primo, ritenta...");
+                
+        }while(trovato == 0);
+        System.out.print(num+" è primo. Hai provato "+cnt+" tentativi!");
+    }    
 }
