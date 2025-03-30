@@ -12,6 +12,7 @@ public class Ese03{
      * @return Booleano 1 è primo, 0 non è primo.
      */
     public static int isPrimo(int _num){
+        // quando passo un valore a funzione la variabile deve essere seguita da'_', e come in c devono avere un tipo e un nome 
         int trovato = 1;
         int i;
         for(i=2; i<=_num/2; i++){
