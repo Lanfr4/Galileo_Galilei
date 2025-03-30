@@ -7,7 +7,7 @@ import java.io.*;
  */
 public class Ese01 {
     public static void main(String args[]) throws IOException{
-        System.out.println("Hello World...");
+        //System.out.println("Hello World...");
 
         // Costrutto IF-ELSE uguale al C
         int a = 123;
@@ -49,7 +49,4 @@ public class Ese01 {
      * @param Integer Secondo valore
      * @return Prodotto dei due valori
      */
-    public int Prodotto(int _a, int _b){
-
-    }
 }
