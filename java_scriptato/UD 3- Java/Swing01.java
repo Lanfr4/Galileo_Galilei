@@ -6,6 +6,33 @@ public class Swing01 extends JFrame{
     private JFrame frame;
     private JPanel panel;
     private JButton btn1;
+<<<<<<< HEAD
+
+    public Swing01(){
+        frame = new JFrame();
+        panel = new JPanel();
+        btn1 = new JButton("Click Me");
+
+        // aggiungo il bottone al pannello 
+        panel.add(btn1);
+        // aggiungo il pannelo al frame
+        frame.add(panel);
+
+        frame.setDefaultCloseOpreation(JFrame.EXIT_ON_CLOSE);
+
+        frame.setTitle("My java GUI App");
+
+        frame.setSize(640,480);
+
+        frame.setVisible(true);
+    }
+
+    public static void main(String[] args){
+        new Swing01();
+    }
+
+}
+=======
     private int cnt_clicks;
     
     public Swing01(){
@@ -46,3 +73,4 @@ public class Swing01 extends JFrame{
         new Swing01();
     }
 }
+>>>>>>> d61f0ae66ef712eeed161cb9ec522f3e06ca0ace
