@@ -17,14 +17,14 @@
             }
         }
 
-    System.out.println('');
+    System.out.println();
 
     }
 
-    public static Amicali(int _num1,int _num2){
+    public static Amicali (int _num1,int _num2){
 
         int i=0,j=0,max=0;
-        int s1=0;s2=0;
+        int s1=0,s2=0;
 
         for(i=0;i<_num1/2;i++){
             if(_num1%i==0){
