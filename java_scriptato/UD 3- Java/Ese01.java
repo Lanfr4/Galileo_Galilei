@@ -1,9 +1,13 @@
 import java.util.*;
 import java.io.*;
-
+/**
+ * This is the first example with Java and OOP Programming.
+ * @author Francesco Pradella
+ * @location Ostiglia (MN)
+ */
 public class Ese01 {
     public static void main(String args[]) throws IOException{
-        System.out.println("Hello World...");
+        //System.out.println("Hello World...");
 
         // Costrutto IF-ELSE uguale al C
         int a = 123;
@@ -39,4 +43,10 @@ public class Ese01 {
             System.out.print(i+ " ");
         }
     }
+    /**
+     * Calcola il prodotto tra due valoriù
+     * @param Integer Primo valore
+     * @param Integer Secondo valore
+     * @return Prodotto dei due valori
+     */
 }
