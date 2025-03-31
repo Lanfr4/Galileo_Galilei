@@ -1,1 +1,0 @@
-Questo folder contiene eventuali script Javascript che intendiamo incorporare nelle nostre pagine.
