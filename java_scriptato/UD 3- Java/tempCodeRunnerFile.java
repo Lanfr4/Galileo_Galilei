@@ -3,4 +3,5 @@ public static void main(String args[]) throws IOException{
         String strIn;
         int num1,div1;
         int num2,div2;
+}
 
