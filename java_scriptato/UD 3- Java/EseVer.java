@@ -21,7 +21,7 @@
 
     }
 
-    public static Amicali (int _num1,int _num2){
+    public static  void Amicali (int _num1,int _num2){
 
         int i=0,j=0,max=0;
         int s1=0,s2=0;
@@ -39,10 +39,10 @@
         }
 
         if(s1 == s2){
-            System.Out.println("I due numneri sono Amicali");
+            System.out.println("I due numneri sono Amicali");
         }
         else{
-            System.Out.println("I due numneri NON  sono Amicali");
+            System.out.println("I due numneri NON  sono Amicali");
         }
 
     }
