@@ -37,9 +37,7 @@ public class SwingV extends JFrame{
     JLabel l3;
 
     public SwingV(){
-
-        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
-
+        
         frame = new JFrame();
         frame.setTitle("Multi panel layout");
         
@@ -58,6 +56,8 @@ public class SwingV extends JFrame{
         btn1 = new JButton("Divisori");
         btn2 = new JButton("Crescenti");
 
+        l03 = new JLabel();
+
         panel.add(l1);
         panel.add(txt1);
         panel.add(l2);
@@ -67,6 +67,8 @@ public class SwingV extends JFrame{
 
         panel.add(btn1);
         panel.add(btn2);
+
+        
         panel.add(l03);
 
         frame.add(panel);
@@ -85,6 +87,7 @@ public class SwingV extends JFrame{
         frame.setSize(640,200);
         // Imposta la visibilità della finestra come 'true';
         frame.setVisible(true);
+
     }
     // Primo Esericizio
     /*
@@ -112,12 +115,12 @@ public class SwingV extends JFrame{
 
                 for(i=0; i<=min; i++){
                     if( v1%i == 0 &&  v2%i == 0 ){
-                        l3.setText(i+ " ");
+                        l03.setText(i+ " ");
                     }
                 }
             }
             else{
-                l3.setText("Errore un numero non è valido");
+                l03.setText("Errore un numero non è valido");
             }
         }
     }
@@ -145,15 +148,15 @@ public class SwingV extends JFrame{
                 int diff2 = v1-v2;
 
                 if(diff1 > diff2){
-                    l3.setText(diff1 + " ");
+                    l03.setText(diff1 + " ");
                 }
                 else{
-                    l3.setText(diff2 + " ");
+                    l03.setText(diff2 + " ");
                 }
             }
 
             else{
-                l3.setText("Valori Errati reinserire");
+                l03.setText("Valori Errati reinserire");
             }
         }
     }
