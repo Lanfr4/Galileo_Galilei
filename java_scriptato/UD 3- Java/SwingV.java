@@ -13,7 +13,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Verifica extends JFrame{
+public class SwingV extends JFrame{
 
     JFrame frame;
     JPanel panel;
@@ -36,7 +36,7 @@ public class Verifica extends JFrame{
     JLabel l2;
     JLabel l3;
 
-    public Verifica(){
+    public SwingV(){
 
         panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 
@@ -159,6 +159,6 @@ public class Verifica extends JFrame{
     }
 
     public static void main(String[] args){
-        new Verifica();
+        new SwingV();
     }
 }
