@@ -27,9 +27,20 @@ CREATE TABLE ACQUISTO(
     foreign key(idMagazzino) references MAGAZZINO(id)
 )ENGINE=InnoDB;
 
+CREATE TABLE ADMINS(
+    id integer unsigned auto_increment,
+    cognome varchar(20) not null,
+    nome varchar(20) not null,
+    mail varchar(200),
+    password char(32)
+
+    primary key(id, mail, password)
+);
+
 INSERT INTO admins(cognome, nome, mail, password)
-VALUES('Francesco', 'Pradella', 'f@p.it', MD5('12345678'));
+VALUES ('Francesco', 'Pradella', 'f@p.it', MD5('12345678'));
 INSERT INTO admins(cognome, nome, mail, password)
-VALUES('Sebastiano', 'Lanfranchi', 's@l.it', MD5('01234567'));
+VALUES ('Luca', 'Cavallaro', 'l@c.it', MD5('01234567'));
 INSERT INTO admins(cognome, nome, mail, password)
-VALUES('Alberto', 'Lombardi', 'a@l.it', MD5('abcd1234'));
+VALUES ('Tommaso', 'Rossi', 't@r.it', MD5('abcd1234'));
+

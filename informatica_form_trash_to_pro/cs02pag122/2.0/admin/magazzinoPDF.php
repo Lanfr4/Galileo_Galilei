@@ -1,37 +1,37 @@
 <?php
+require('../../../../../fpdf186/fpdf.php');
+require('../include/lib.php');
 
-    require("../../../../fpdf/fpdf.php");
-    require("../include/lib.php");
+$mypdf = new FPDF();
 
-    $mypdf -> AddPage();
+// Aggiungo una pagina al pdf.
+    $mypdf->AddPage();
 
-    $i=0;
+    // imposto un carattere Arial a 14pt
+    $mypdf->SetFont('Arial', '', 14);
 
-    $db = new mysqli($DBHOST, $DBUSER, $DBPASSWORD, $DBNAME); 
+    // aggancio al database e selezione di tutti i record della tabella magazzino
+    $db = new mysqli($DBHOST, $DBUSER, $DBPASSWORD, $DBNAME);
     $sql = "SELECT * FROM magazzino ORDER BY nome";
     $resultSet = $db->query($sql);
-
-    $mypfd->Cell(10,10,"ID",1,0,'C');
-    $mypfd->Cell(70,10,"Nome",1,0,'C');
-    $mypfd->Cell(80,10,"Città",1,0,'C');
-    $mypfd->Cell(30,10,"Provincia",1,0,'C');
+    
+    // creazione di tutte le celle per visualizzare i dati estratti.
+    $mypdf->Cell(10,10,'ID',0,0,'C');
+    $mypdf->Cell(70,10,'Nome',0,0,'C');
+    $mypdf->Cell(80,10,'Città',0,0,'C');
+    $mypdf->Cell(30,10,'Provincia',0,0,'C');
     $mypdf->Ln();
-
-
-    while($record = $resultSet-> fetch_assoc()){
-        $mypfd->Cell(10,10,$record['id'],1,0,'C');
-        $mypfd->Cell(70,10,$record['nome'],1,0);
-        $mypfd->Cell(80,10,$record['città'],1,0);
-        $mypfd->Cell(30,10,$record['provincia0'],1,0,'C');
-        $mypdf->Ln();
+    $i=0;
+    $cnt = $resultSet->num_rows;
+    while($record = $resultSet->fetch_assoc()){
         $i++;
+        $mypdf->Cell(10, 10, $record['id'], 1, 0, 'C');
+        $mypdf->Cell(70, 10, $record['nome'], 1, 0);
+        $mypdf->Cell(80, 10, $record['citta'], 1, 0);
+        $mypdf->Cell(30, 10, $record['provincia'], 1, 0, 'C');
+        $mypdf->Ln();
     }
+    $mypdf->Cell(90,10,'Magazzini presenti: '.$i.' oppure cnt:'.$cnt, 0,1);
 
-    // Sotto la tabella numero dei magazzini a video
-    $mypdf->Ln();
-    $mypdf->Cell(20,10,"Num Magazzini",0,1,'c');
-    $mypdf->Cell(20,10,$i,0,1,'C');
-
-
-    $mypdf -> Output();
+    $mypdf->Output();
 ?>

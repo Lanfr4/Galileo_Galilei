@@ -3,8 +3,8 @@
 il file sarà incluso nei file php che si trovano in /php. */
 $DBHOST = "localhost";
 $DBUSER = "root";
-$DBPASSWORD = "root";
-$DBNAME = "cs02pag122"; // cs02pag122 se lo avete chiamato così!
+$DBPASSWORD = "";
+$DBNAME = "5b_as2425"; // cs02pag122 se lo avete chiamato così!
 
 /**
  * Funzione che genera la parte iniziale di ogni pagina, costruendo il corpo della pagina partendo dai tag fondamentali, genera il codice fino
@@ -21,7 +21,7 @@ function writeHeader(){
                     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
                 </head>
                 <body>
-                    <div class="container">
+                    <div class="container-fluid">
     ');
     return;
 }
